@@ -57,3 +57,246 @@ html, body {
     height: 100%;
 }
 
+
+/* code below */
+
+* {
+	max-width: 800px;
+	margin: auto;
+}
+
+div {
+	border-radius: 5px;
+}
+
+#header {
+	height: 2.0rem;
+	width: 100%;
+	border-top: 1px solid @main-border-color;
+}
+
+/*.displayFlex(@justify, @align)*/
+
+.container {
+	background: slategray;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 800px;
+	margin: 50px auto;
+	border: 2px solid red;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	background: @nav-bg;
+}
+
+.navcontainer {
+	// display: flex;
+	.center();
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: space-evenly;
+	width: 100%;
+  }
+
+.nav {
+	margin: 0 auto;
+  	width: 100%;
+	padding: 2px;
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.5rem;
+
+	@media @phone {
+		background-color: crimson;
+	}
+}
+
+// .main-container {
+	
+// }
+
+.stuff {
+	display: flex;
+	justify-content: center;
+	border-top: 2px solid @main-border-color;
+}
+
+.intro {
+	margin: 0% auto;
+	width: 50%;
+	align-items: center;
+	padding: 1px;
+	border-top: 2px solid @main-border-color;
+	font-size: 1.5rem;	
+	display: flex;  
+	justify-content: space-evenly;
+}
+
+.intro-text {
+	margin: 0 auto;
+	width: 50%;
+	align-items: center;
+	flex-wrap: wrap;
+	// border: 2px solid purple;
+	padding: 20px;
+}
+
+.skills {
+	margin: 0% auto;
+	width: 50%;
+	align-items: center;
+	padding: 1px;
+	border-top: 2px solid @main-border-color;
+	font-size: 1.5rem;	
+	display: flex;  
+	justify-content: space-evenly;
+
+	
+}
+
+.skills-list {
+	margin: 0% auto;
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	// border: 2px solid purple;
+	padding: 20px;
+}
+
+.education {
+	margin: 0% auto;
+	width: 50%;
+	align-items: center;
+	padding: 1px;
+	border-top: 2px solid @main-border-color;
+	font-size: 1.5rem;	
+	display: flex;  
+	justify-content: space-evenly;
+}
+
+
+.edu-list {
+	margin: 0% auto;
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	// border: 2px solid aqua;
+	padding: 20px;
+}
+
+.work {
+	margin: 0% auto;
+	width: 50%;
+	align-items: center;
+	padding: 1px;
+	border-top: 2px solid @main-border-color;
+	font-size: 1.5rem;	
+	display: flex;  
+	justify-content: space-evenly;
+}
+
+.work-list {
+	margin: 0% auto;
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	// border: 2px solid chocolate;
+	padding: 20px;
+}
+
+.contact {
+	margin: 0% auto;
+	width: 50%;
+	align-items: center;
+	padding: 1px;
+	border-top: 2px solid @main-border-color;
+	font-size: 1.5rem;	
+	display: flex;  
+	justify-content: space-evenly;
+}
+
+.contact-list {
+	margin: 0% auto;
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+	justify-content: center;
+	// align-items: center;
+	// border: 2px solid crimson;
+	padding: 20px;
+	.bordered();
+}
+
+// Variables
+
+// Color pointers
+@nav-bg: @wild-sand;
+// @nav-font: @river-bend;
+// @nav-border: @sea-shell;
+
+// @header-font-color: @ebony-clay;
+// @main-font-color: @shuttle-gray;
+@main-border-color: @border-real;
+
+// @footer-background: @wild-sand;
+// @footer-font-color: @waterloo;
+
+// // Color Vars
+@wild-sand: rgb(204, 137, 137);
+// @river-bend: #454A59;
+// @sea-shell: #F1F1F1;
+// @ebony-clay: #23293B;
+// @shuttle-gray: #5E6164;
+// @porcelain: #F6F7F8;
+// @waterloo: #81848E;
+// @btn-bg-color: #22283A;
+@border-real: #15508b;
+
+// Mobile var
+
+@phone:~"(max-width: 500px)";
+
+// Mixins Here
+
+
+// .custom-btn(@width: 200px, @padding: 5%) {
+//     background-color: @btn-bg-color;
+//     border-radius: 10px;
+//     width: @width;
+//     padding: @padding;
+//     font-size: 1.8rem;
+//     text-align: center;
+//     color: white;
+
+
+// &:hover {
+//     background-color:skyblue;
+//     color: @btn-bg-color;
+//     }
+// }
+
+.center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bordered(){
+	border:3px dotted @accent-one;
+	padding:2%;
+  }
+
+  @accent-one:#cf7b26;
